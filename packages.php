@@ -12,6 +12,7 @@ $ php /root/scripts/modx/packages.php /var/www/USERNAME/www/ && /var/www/USERNAM
 // >> Список репозиториев с компонентами для установки
 
 $modstoreKey = "";
+$modstoreUser = "54@5444.ru";
 
 $providers = array(
     array(
@@ -29,7 +30,7 @@ $providers = array(
     array(
         'name'		=> 'Modstore',
         'service_url'	=> 'http://modstore.pro/extras/',
-        'username'	=> '54@5444.ru',
+        'username'	=> $modstoreUser,
         'api_key'	=> $modstoreKey,
         'packages'	=> array(
             'ace',
