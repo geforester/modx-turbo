@@ -49,7 +49,7 @@ $settings = array(
 	, 'friendly_alias_translit' => 'russian'
 	, 'site_status' => 0
     , 'use_alias_path' => 1
-    , 'riendly_alias_ytranslit_key' => $yandexKey
+    , 'friendly_alias_ytranslit_key' => $yandexKey
 
 
 );
