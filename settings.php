@@ -124,8 +124,8 @@ foreach ($resources as $attr) {
 }
 echo "Done!<br>";
 
-// todo Category
 
+// todo Category
 
 
 // *****************    Prepare filesystem
@@ -188,18 +188,12 @@ echo "Done!<br><br>";
 
 
 
-// ***************** Chunks
+/* ***************** Chunks
 echo "Creating Chunks …<br>";
 $chunks = array(
     array('name' => 'childs',
         'description' => '',
         'snippet' => '<div class="childs">[[pdoMenu? &parents=`[[*id]]` &level=`1`]]</div>'
-    )
-, array('name' => 'HEAD',
-        'description' => '',
-        'snippet' => '',
-        'static' => '1',
-        'static_file' => '/assets/chunk.html'
     )
 
 );
@@ -210,7 +204,7 @@ foreach ($chunks as $attr) {
 }
 echo "Done!<br><br>";
 
-
+*/
 
 
 // *****************    todo TVs
@@ -220,8 +214,8 @@ echo "Creating TVs …<br>";
 $crttv = $modx->runProcessor('element/tv/create', array(
     	'name' => 'img',
     	'caption' => 'Изображение',
-    	'type' => 'checkbox',
-    	'els' => 'Да==@CHUNK childs'
+        'templates' => array(1),
+    	'type' => 'image',
 ));
 echo "Done!<br><br>";
 
