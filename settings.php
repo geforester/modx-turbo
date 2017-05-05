@@ -92,7 +92,7 @@ $resources = array(
 		<h3 style="margin: 15px 0 0;">Что делать?</h3>
 		<ul style="margin: 5px 0 0 15px;">
 			<li>проверьте правильность написания адреса,</li>
-			<li>перейдите на <a href="[[!++site_url]]">главную страницу</a> сайта,</li>
+			<li>перейдите на <a href="[[++site_url]]">главную страницу</a> сайта,</li>
 			<li>или <a href="javascript:history.go(-1);">вернитесь на предыдущую страницу</a>.</li>
 		</ul>
 	</div>
@@ -126,6 +126,39 @@ echo "Done!";
 
 // todo Category
 
+
+
+// *****************    Prepare filesystem
+echo "<br> Preparing filesystem …";
+$folders = array(
+    'assets/templates',
+    'assets/templates/chunks',
+    'assets/templates/css',
+    'assets/templates/fonts',
+    'assets/templates/img',
+    'assets/templates/js',
+    'assets/images'
+);
+
+foreach ($folders as $item) {
+    mkdir($item, 0755);
+}
+
+$files = array(
+    'assets/templates/chunks/head.html',
+    'assets/templates/chunks/header.html',
+    'assets/templates/chunks/footer.html',
+    'assets/templates/chunks/modal.html',
+    'assets/templates/chunks/slider.row.html',
+    'assets/templates/chunks/news.row.html',
+    'assets/templates/chunks/item.row.html',
+);
+
+foreach ($files as $item) {
+    file_put_contents($item,'', FILE_APPEND);
+    echo "created {$item}";
+}
+echo "Done!";
 
 
 // chunks
@@ -168,36 +201,7 @@ echo "Done!";
 
 
 
-// *****************    Prepare filesystem
-echo "<br> Preparing filesystem …";
-$folders = array(
-    'assets/templates',
-    'assets/templates/chunks',
-    'assets/templates/css',
-    'assets/templates/fonts',
-    'assets/templates/img',
-    'assets/templates/js',
-    'assets/images'
-);
 
-foreach ($folders as $item) {
-    mkdir($item, 0755);
-}
-
-$files = array(
-    'assets/templates/chunks/head.html',
-    'assets/templates/chunks/header.html',
-    'assets/templates/chunks/footer.html',
-    'assets/templates/chunks/modal.html',
-    'assets/templates/chunks/slider.row.html',
-    'assets/templates/chunks/news.row.html',
-    'assets/templates/chunks/item.row.html',
-);
-
-foreach ($files as $item) {
-    file_put_contents($item,'', FILE_APPEND);
-    echo "created {$item}";
-}
 
 echo "All right! Let's go!";
 
