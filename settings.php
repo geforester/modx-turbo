@@ -19,7 +19,7 @@ header("Content-type: text/plain");
 
 
 // *****************    Settings
-echo "<br> Preparing Settings …";
+echo "<br> Preparing Settings …<br>";
 $settings = array(
 	  'cultureKey' => 'ru'
 	, 'fe_editor_lang' => 'ru'
@@ -67,13 +67,13 @@ foreach ($settings as $k => $v) {
     	echo 'added '.$k.' = '.$v."\n";
     }
 }
-echo "Done!";
+echo "Done!<br><br>";
 
 
 
 
 // *****************    Resources
-echo "<br> Creating resources …";
+echo "Creating resources …<br>";
 $resources = array(
 	  array('pagetitle' => 'Страница не найдена',
 			'template' => 1,
@@ -122,14 +122,14 @@ foreach ($resources as $attr) {
 	// $modx->error->reset();
 	$response = $modx->runProcessor('resource/create', $attr);
 }
-echo "Done!";
+echo "Done!<br>";
 
 // todo Category
 
 
 
 // *****************    Prepare filesystem
-echo "<br> Preparing filesystem …";
+echo "<br> Preparing filesystem …<br>";
 $folders = array(
     'assets/templates',
     'assets/templates/chunks',
@@ -156,13 +156,40 @@ $files = array(
 
 foreach ($files as $item) {
     file_put_contents($item,'', FILE_APPEND);
-    echo "created {$item}";
+    echo "created {$item}<br>";
 }
-echo "Done!";
+echo "Done!<br>";
 
 
-// chunks
-echo "<br> Creating Chunks …";
+// ***************** Static chunks
+echo "<br> Creating static chunks …";
+
+$staticChunks = array(
+     'head'
+    ,'header'
+    ,'footer'
+    ,'modal'
+    ,'slider.row'
+    ,'news.row'
+    ,'item.row'
+);
+
+foreach ($staticChunks as $item) {
+
+    $staticChunksParam = array(
+        'name' => $item,
+        'static' => '1',
+        'static_file' => "/assets/{$item}.html"
+    );
+    $response = $modx->runProcessor('element/chunk/create', $staticChunksParam);
+    echo "created static chunk: {$item}<br>";
+}
+echo "Done!<br><br>";
+
+
+
+// ***************** Chunks
+echo "Creating Chunks …<br>";
 $chunks = array(
     array('name' => 'childs',
         'description' => '',
@@ -179,16 +206,16 @@ $chunks = array(
 foreach ($chunks as $attr) {
     // $modx->error->reset();
     $response = $modx->runProcessor('element/chunk/create', $attr);
-    echo "created {$attr}";
+    echo "created chunk: {$attr} <br>";
 }
-echo "Done!";
+echo "Done!<br><br>";
 
 
 
 
 // *****************    todo TVs
 
-echo "<br> Creating TVs …";
+echo "Creating TVs …<br>";
 // $modx->error->reset();
 $crttv = $modx->runProcessor('element/tv/create', array(
     	'name' => 'img',
@@ -196,7 +223,7 @@ $crttv = $modx->runProcessor('element/tv/create', array(
     	'type' => 'checkbox',
     	'els' => 'Да==@CHUNK childs'
 ));
-echo "Done!";
+echo "Done!<br><br>";
 
 
 
