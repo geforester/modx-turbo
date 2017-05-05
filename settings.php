@@ -122,13 +122,29 @@ foreach ($resources as $attr) {
 	// $modx->error->reset();
 	$response = $modx->runProcessor('resource/create', $attr);
 }
-echo "Done!<br>";
+echo "Done!<br><br>";
 
 
-// todo Category
+// *****************
+echo "Creating categories …<br>";
+$categories = array(
+    'SEO',
+    'Template'
+);
+
+foreach ($categories as $category) {
+
+    $cat = array(
+        'category' => $category
+    );
+
+    $response = $modx->runProcessor('element/category/create', $cat);
+    echo "created: {$cat['category']} <br>";
+}
+echo "Done! <br><br>";
 
 
-// *****************    Prepare filesystem
+// *****************
 echo "<br> Preparing filesystem …<br>";
 $folders = array(
     'assets/templates',
