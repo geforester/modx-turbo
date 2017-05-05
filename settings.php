@@ -3,6 +3,8 @@
 //Personal keys
 
 $yandexKey = ""; //Yandex Translation key
+$smtpUser = ""; // Email for sending by SMTP
+$smtpPass = ""; // Password
 
 
 require_once dirname(__FILE__).'/config.core.php';
@@ -36,6 +38,8 @@ $settings = array(
     , 'mail_smtp_port' => 465
     , 'mail_smtp_prefix' => 'ssl'
     , 'mail_use_smtp' => 1
+    , 'mail_smtp_user' => $smtpUser
+    , 'mail_smtp_pass' => $smtpPass
 
 
 	//url
