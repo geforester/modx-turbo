@@ -1,4 +1,10 @@
 <?php
+
+//Personal keys
+
+$yandexKey = ""; //Yandex Translation key
+
+
 require_once dirname(__FILE__).'/config.core.php';
 include_once MODX_CORE_PATH . 'model/modx/modx.class.php';
 
@@ -39,6 +45,7 @@ $settings = array(
 	, 'friendly_alias_translit' => 'russian'
 	, 'site_status' => 0
     , 'use_alias_path' => 1
+    , 'riendly_alias_ytranslit_key' => $yandexKey
 
 
 );
@@ -135,7 +142,7 @@ $chunks = array(
 foreach ($chunks as $attr) {
     // $modx->error->reset();
     $response = $modx->runProcessor('element/chunk/create', $attr);
-    echo "created {$item}";
+    echo "created {$attr}";
 }
 echo "Done!";
 
