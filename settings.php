@@ -14,7 +14,7 @@ $modx= new modX();
 $modx->initialize('mgr');
 $modx->setLogLevel(modX::LOG_LEVEL_INFO);
 $modx->setLogTarget(XPDO_CLI_MODE ? 'ECHO' : 'HTML');
-header("Content-type: text/plain");
+header("Content-type: text/html");
 
 
 
@@ -158,11 +158,11 @@ foreach ($files as $item) {
     file_put_contents($item,'', FILE_APPEND);
     echo "created {$item}<br>";
 }
-echo "Done!<br>";
+echo "Done!<br><br> ";
 
 
 // ***************** Static chunks
-echo "<br> Creating static chunks …";
+echo "Creating static chunks …<br> ";
 
 $staticChunks = array(
      'head'
@@ -206,7 +206,7 @@ $chunks = array(
 foreach ($chunks as $attr) {
     // $modx->error->reset();
     $response = $modx->runProcessor('element/chunk/create', $attr);
-    echo "created chunk: {$attr} <br>";
+    echo "created chunk: {$attr['name']} <br>";
 }
 echo "Done!<br><br>";
 
