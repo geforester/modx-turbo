@@ -30,7 +30,6 @@ $settings = array(
     , 'error_page' => 2
     , 'cache_disabled' => 1
     , 'cache_resource' => 0
-    , 'default_template' => 3
 
     //mail
     , 'mail_smtp_auth' => 1
