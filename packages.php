@@ -14,6 +14,12 @@ $ php /root/scripts/modx/packages.php /var/www/USERNAME/www/ && /var/www/USERNAM
 $modstoreKey = "";
 $modstoreUser = "54@5444.ru";
 
+
+// Check user's keys
+if ($modstoreKey == "") {
+    exit("Ошибка: не указан ключ modstore!");
+}
+
 $providers = array(
     array(
         'name'		=> 'modx.com',
