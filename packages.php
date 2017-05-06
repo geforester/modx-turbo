@@ -15,9 +15,9 @@ $modstoreKey = "";
 $modstoreUser = "54@5444.ru";
 
 
-// Check user's keys
-if ($modstoreKey == "") {
-    exit("Ошибка: не указан ключ modstore!");
+// Check appstore keys
+if ($modstoreKey == "" || $modstoreUser == "") {
+    exit("Ошибка: не указан ключ или пользователь modstore!");
 }
 
 $providers = array(
