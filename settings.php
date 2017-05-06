@@ -171,8 +171,8 @@ $files = array(
     'assets/templates/chunks/news.row.html',
     'assets/templates/chunks/item.row.html',
     'assets/templates/main.html',
-    'assets/templates/emailTplCallback.html',
-    'assets/templates/tpl.AjaxForm.callback.html',
+    'assets/templates/chunks/emailTplCallback.html',
+    'assets/templates/chunks/tpl.AjaxForm.callback.html',
     'assets/templates/base.html'
 );
 
@@ -202,7 +202,7 @@ foreach ($staticChunks as $item) {
     $staticChunksParam = array(
         'name' => $item,
         'static' => '1',
-        'static_file' => "/assets/{$item}.html"
+        'static_file' => "/assets/templates/chunks/{$item}.html"
     );
     $response = $modx->runProcessor('element/chunk/create', $staticChunksParam);
     echo "created static chunk: {$item}<br>";
