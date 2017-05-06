@@ -1,0 +1,27 @@
+@c-primary: blue;
+@c-secondary: blue;
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+}
+
+.t-duration {
+    transition-duration: 0.3s;
+}
+
+a {
+    color: @c-primary;
+    .t-duration;
+    &:hover {
+        color: @c-secondary;
+        .t-duration;
+    }
+}
+
+h1,h2,h3,h4,h5 {
+    letter-spacing: .18px;
+    margin: 20px 0 10px 0;
+}
+
