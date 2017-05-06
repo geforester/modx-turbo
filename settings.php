@@ -18,7 +18,7 @@ header("Content-type: text/html");
 
 
 
-// *****************    Settings
+// *************************************************************************************
 echo "<br> Working on settings …<br>";
 $settings = array(
 	  'cultureKey' => 'ru'
@@ -68,12 +68,13 @@ foreach ($settings as $k => $v) {
     	echo 'added '.$k.' = '.$v."\n";
     }
 }
+
 echo "Done!<br><br>";
 
 
 
 
-// *****************    Resources
+// *************************************************************************************
 echo "Working on  resources …<br>";
 $resources = array(
 	  array('pagetitle' => 'Страница не найдена',
@@ -120,13 +121,12 @@ $resources = array(
 			)
 );
 foreach ($resources as $attr) {
-	// $modx->error->reset();
 	$response = $modx->runProcessor('resource/create', $attr);
 }
 echo "Done!<br><br>";
 
 
-// *****************
+// *************************************************************************************
 echo "Working on categories …<br>";
 $categories = array(
     'SEO',
@@ -142,10 +142,11 @@ foreach ($categories as $category) {
     $response = $modx->runProcessor('element/category/create', $cat);
     echo "created: {$cat['category']} <br>";
 }
+
 echo "Done! <br><br>";
 
 
-// *****************
+// *************************************************************************************
 echo "<br>Working on filesystem …<br>";
 $folders = array(
     'assets/templates',
@@ -170,6 +171,8 @@ $files = array(
     'assets/templates/chunks/news.row.html',
     'assets/templates/chunks/item.row.html',
     'assets/templates/main.html',
+    'assets/templates/emailTplCallback.html',
+    'assets/templates/tpl.AjaxForm.callback.html',
     'assets/templates/base.html'
 );
 
@@ -177,12 +180,12 @@ foreach ($files as $item) {
     file_put_contents($item,'', FILE_APPEND);
     echo "created {$item}<br>";
 }
+
 echo "Done!<br><br> ";
 
 
-// ***************** Static chunks
+// *************************************************************************************
 echo "Working on static chunks …<br> ";
-
 $staticChunks = array(
      'head'
     ,'header'
@@ -191,10 +194,11 @@ $staticChunks = array(
     ,'slider.row'
     ,'news.row'
     ,'item.row'
+    ,'emailTplCallback'
+    ,'tpl.AjaxForm.callback'
 );
 
 foreach ($staticChunks as $item) {
-
     $staticChunksParam = array(
         'name' => $item,
         'static' => '1',
@@ -203,11 +207,12 @@ foreach ($staticChunks as $item) {
     $response = $modx->runProcessor('element/chunk/create', $staticChunksParam);
     echo "created static chunk: {$item}<br>";
 }
+
 echo "Done!<br><br>";
 
 
 
-/* ***************** Chunks
+/* *************************************************************************************
 echo "Working on chunks …<br>";
 $chunks = array(
     array('name' => 'childs',
@@ -217,19 +222,18 @@ $chunks = array(
 
 );
 foreach ($chunks as $attr) {
-    // $modx->error->reset();
     $response = $modx->runProcessor('element/chunk/create', $attr);
     echo "created chunk: {$attr['name']} <br>";
 }
+
 echo "Done!<br><br>";
 
 */
 
 
-// ***************** Templates
+// *************************************************************************************
 
 echo "Working on templates …<br>";
-
 $crtTemplates = $modx->runProcessor('element/template/create', array(
     'templatename' => 'main',
     'static' => '1',
@@ -242,16 +246,14 @@ $crtTemplates = $modx->runProcessor('element/template/create', array(
     'static_file' => "/assets/templates/base.html"
 ));
 
-
 echo "Done!<br><br>";
 
 
 
 
-// ***************** TVs
+// *************************************************************************************
 
 echo "Working on creating TVs …<br>";
-// $modx->error->reset();
 $crttv = $modx->runProcessor('element/tv/create', array(
     	'name' => 'img',
     	'caption' => 'Изображение',
@@ -271,15 +273,11 @@ $crttv = $modx->runProcessor('element/tv/create', array(
     'type' => 'text',
     'category' => '10'
 ));
+
 echo "Done!<br><br>";
 
 
 
-
-
-
 echo "All right! Let's go!";
-
-// $modx->cacheManager->refresh();
 $modx->runProcessor('system/clearcache');
 
