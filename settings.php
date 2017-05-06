@@ -57,13 +57,13 @@ foreach ($settings as $k => $v) {
 	if (!empty($opt)){
 		$opt->set('value', $v);
 		$opt->save();
-      	echo 'edited '.$k.' = '.$v."\n";
+      	echo 'edited '.$k.' = '.$v."<br>";
     } else {
     	$newOpt = $modx->newObject('modSystemSetting');
     	$newOpt->set('key', $k);
     	$newOpt->set('value', $v);
     	$newOpt->save();
-    	echo 'added '.$k.' = '.$v."\n";
+    	echo 'added '.$k.' = '.$v."<br>";
     }
 }
 
