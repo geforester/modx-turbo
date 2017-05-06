@@ -31,6 +31,7 @@ $settings = array(
     , 'error_page' => 2
     , 'cache_disabled' => 1
     , 'cache_resource' => 0
+    , 'default_template' => 3
 
     //mail
     , 'mail_smtp_auth' => 1
@@ -168,6 +169,8 @@ $files = array(
     'assets/templates/chunks/slider.row.html',
     'assets/templates/chunks/news.row.html',
     'assets/templates/chunks/item.row.html',
+    'assets/templates/main.html',
+    'assets/templates/base.html'
 );
 
 foreach ($files as $item) {
@@ -223,15 +226,50 @@ echo "Done!<br><br>";
 */
 
 
-// *****************    todo TVs
+// ***************** Templates
+
+echo "Creating Templates …<br>";
+
+$crtTemplates = $modx->runProcessor('element/template/create', array(
+    'templatename' => 'main',
+    'static' => '1',
+    'static_file' => "/assets/templates/main.html"
+));
+
+$crtTemplates = $modx->runProcessor('element/template/create', array(
+    'templatename' => 'base',
+    'static' => '1',
+    'static_file' => "/assets/templates/base.html"
+));
+
+
+echo "Done!<br><br>";
+
+
+
+
+// ***************** TVs
 
 echo "Creating TVs …<br>";
 // $modx->error->reset();
 $crttv = $modx->runProcessor('element/tv/create', array(
     	'name' => 'img',
     	'caption' => 'Изображение',
-        'templates' => array(1),
     	'type' => 'image',
+));
+
+$crttv = $modx->runProcessor('element/tv/create', array(
+    'name' => 'seo-desc',
+    'caption' => 'Описание страницы',
+    'type' => 'text',
+    'category' => '10'
+));
+
+$crttv = $modx->runProcessor('element/tv/create', array(
+    'name' => 'seo-keywords',
+    'caption' => 'Ключевые слова',
+    'type' => 'text',
+    'category' => '10'
 ));
 echo "Done!<br><br>";
 
