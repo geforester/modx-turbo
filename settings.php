@@ -1,8 +1,8 @@
 <?php
 
-//Personal keys
+//User's keys
 
-$yandexKey = ""; //Yandex Translation key
+$yandexKey = ""; // Yandex Translation key
 $smtpUser = ""; // Email for sending by SMTP
 $smtpPass = ""; // Password
 
@@ -19,7 +19,7 @@ header("Content-type: text/html");
 
 
 // *****************    Settings
-echo "<br> Preparing Settings …<br>";
+echo "<br> Working on settings …<br>";
 $settings = array(
 	  'cultureKey' => 'ru'
 	, 'fe_editor_lang' => 'ru'
@@ -74,7 +74,7 @@ echo "Done!<br><br>";
 
 
 // *****************    Resources
-echo "Creating resources …<br>";
+echo "Working on  resources …<br>";
 $resources = array(
 	  array('pagetitle' => 'Страница не найдена',
 			'template' => 1,
@@ -127,7 +127,7 @@ echo "Done!<br><br>";
 
 
 // *****************
-echo "Creating categories …<br>";
+echo "Working on categories …<br>";
 $categories = array(
     'SEO',
     'Template'
@@ -146,7 +146,7 @@ echo "Done! <br><br>";
 
 
 // *****************
-echo "<br> Preparing filesystem …<br>";
+echo "<br>Working on filesystem …<br>";
 $folders = array(
     'assets/templates',
     'assets/templates/chunks',
@@ -181,7 +181,7 @@ echo "Done!<br><br> ";
 
 
 // ***************** Static chunks
-echo "Creating static chunks …<br> ";
+echo "Working on static chunks …<br> ";
 
 $staticChunks = array(
      'head'
@@ -208,7 +208,7 @@ echo "Done!<br><br>";
 
 
 /* ***************** Chunks
-echo "Creating Chunks …<br>";
+echo "Working on chunks …<br>";
 $chunks = array(
     array('name' => 'childs',
         'description' => '',
@@ -228,7 +228,7 @@ echo "Done!<br><br>";
 
 // ***************** Templates
 
-echo "Creating Templates …<br>";
+echo "Working on templates …<br>";
 
 $crtTemplates = $modx->runProcessor('element/template/create', array(
     'templatename' => 'main',
@@ -250,7 +250,7 @@ echo "Done!<br><br>";
 
 // ***************** TVs
 
-echo "Creating TVs …<br>";
+echo "Working on creating TVs …<br>";
 // $modx->error->reset();
 $crttv = $modx->runProcessor('element/tv/create', array(
     	'name' => 'img',
