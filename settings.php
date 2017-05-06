@@ -228,7 +228,6 @@ echo "Done!<br><br>";
 
 */
 
-
 // *************************************************************************************
 
 echo "Working on templates …<br>";
@@ -238,9 +237,7 @@ $crtTemplates = $modx->runProcessor('element/template/create', array(
     'static_file' => "/assets/templates/main.html"
 ));
 
-
 echo "Done!<br><br>";
-
 
 
 
