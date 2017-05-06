@@ -238,11 +238,6 @@ $crtTemplates = $modx->runProcessor('element/template/create', array(
     'static_file' => "/assets/templates/main.html"
 ));
 
-$crtTemplates = $modx->runProcessor('element/template/create', array(
-    'templatename' => 'base',
-    'static' => '1',
-    'static_file' => "/assets/templates/base.html"
-));
 
 echo "Done!<br><br>";
 
