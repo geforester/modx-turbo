@@ -6,7 +6,6 @@ $yandexKey = ""; // Yandex Translation key
 $smtpUser = ""; // Email for sending by SMTP
 $smtpPass = ""; // Password
 
-
 require_once dirname(__FILE__).'/config.core.php';
 include_once MODX_CORE_PATH . 'model/modx/modx.class.php';
 
@@ -41,7 +40,6 @@ $settings = array(
     , 'mail_use_smtp' => 1
     , 'mail_smtp_user' => $smtpUser
     , 'mail_smtp_pass' => $smtpPass
-
 
 	//url
 	, 'automatic_alias' => 1
@@ -170,9 +168,9 @@ $files = array(
     'assets/templates/chunks/slider.row.html',
     'assets/templates/chunks/news.row.html',
     'assets/templates/chunks/item.row.html',
-    'assets/templates/main.html',
     'assets/templates/chunks/emailTplCallback.html',
     'assets/templates/chunks/tpl.AjaxForm.callback.html',
+    'assets/templates/main.html',
     'assets/templates/base.html'
 );
 
@@ -264,14 +262,14 @@ $crttv = $modx->runProcessor('element/tv/create', array(
     'name' => 'seo-desc',
     'caption' => 'Описание страницы',
     'type' => 'text',
-    'category' => '10'
+    'category' => '9'
 ));
 
 $crttv = $modx->runProcessor('element/tv/create', array(
     'name' => 'seo-keywords',
     'caption' => 'Ключевые слова',
     'type' => 'text',
-    'category' => '10'
+    'category' => '9'
 ));
 
 echo "Done!<br><br>";
