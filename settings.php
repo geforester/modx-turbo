@@ -46,7 +46,6 @@ $settings = array(
 	, 'friendly_urls' => 1
 	, 'container_suffix' => '.html'
 	, 'friendly_alias_translit' => 'russian'
-	, 'site_status' => 0
     , 'use_alias_path' => 1
     , 'friendly_alias_ytranslit_key' => $yandexKey
 
