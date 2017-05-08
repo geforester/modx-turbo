@@ -249,6 +249,24 @@ $crttv = $modx->runProcessor('element/tv/create', array(
 ));
 
 $crttv = $modx->runProcessor('element/tv/create', array(
+    'name' => 'address',
+    'caption' => 'Адрес',
+    'type' => 'text',
+));
+
+$crttv = $modx->runProcessor('element/tv/create', array(
+    'name' => 'phone',
+    'caption' => 'Телефон',
+    'type' => 'text',
+));
+
+$crttv = $modx->runProcessor('element/tv/create', array(
+    'name' => 'email',
+    'caption' => 'Email',
+    'type' => 'text',
+));
+
+$crttv = $modx->runProcessor('element/tv/create', array(
     'name' => 'seo-desc',
     'caption' => 'Описание страницы',
     'type' => 'text',
