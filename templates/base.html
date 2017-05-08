@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="[[*seo-desc]]">
-    <meta name="keywords" content="[[*seo-keywords]]">
-    <meta property="og:image" content="[[*img]]"/>
+    <meta name="description" content="{$_modx->resource.seo-desc}">
+    <meta name="keywords" content="{$_modx->resource.seo-keywords}">
+    <meta property="og:image" content="{$_modx->resource.img}"/>
 
     <link rel="shortcut icon apple-touch-icon" href="/assets/templates/img/apple-touch-icon.png" />
 
@@ -20,28 +20,27 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
 
     <!--
-    [[MinifyX?
-        &minifyCss=`1`
-        &minifyJs=`1`
-        &forceUpdate=`1`
-        &registerJs=`default`
-        &registerCss=`default`
-        &jsSources=`
-        /assets/templates/js/modal.bootstrap.min.js
-        `
-        &cssSources=`
-        /assets/templates/css/normalize.css,
-        /assets/templates/css/modal.bootstrap.css,
-        /assets/templates/css/.less
-        `
-    ]]
+    {$_modx->runSnippet('MinifyX', [
+        'minifyCss' => 1,
+        'minifyJs' => 1,
+        'forceUpdate' => 1,
+        'registerJs' => 'default',
+        'registerCss' => 'default',
+        'forceUpdate' => 1,
+        'jsSources' =>'/assets/templates/js/modal.bootstrap.min.js,
+                        /assets/templates/js/main.js',
+        'cssSources' =>'/assets/templates/css/normalize.css,
+                        /assets/templates/css/modal.bootstrap.css,
+                        /assets/templates/css/prc.less,
+                        /assets/templates/css/prc-mobile.less'
+    ])}
     -->
 
     <!-- temp JS -->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
     <!-- // temp JS -->
 
-    <title>[[++site_name]] – [[*pagetitle]]</title>
+    <title>{$_modx->config.site_name} – {$_modx->resource.pagetitle}</title>
 </head>
 <body>
 
