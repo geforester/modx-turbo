@@ -267,14 +267,14 @@ $crttv = $modx->runProcessor('element/tv/create', array(
 ));
 
 $crttv = $modx->runProcessor('element/tv/create', array(
-    'name' => 'seo-desc',
+    'name' => 'seoDesc',
     'caption' => 'Описание страницы',
     'type' => 'text',
     'category' => '9'
 ));
 
 $crttv = $modx->runProcessor('element/tv/create', array(
-    'name' => 'seo-keywords',
+    'name' => 'seoKeywords',
     'caption' => 'Ключевые слова',
     'type' => 'text',
     'category' => '9'

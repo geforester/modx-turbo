@@ -30,7 +30,8 @@ $providers = array(
             'formit',
             'MIGX',
             'TinyMCE Rich Text Editor',
-            'simpleUpdater'
+            'simpleUpdater',
+            'phpThumbOn'
         ),
     ),
     array(
