@@ -30,6 +30,8 @@ $settings = array(
     , 'error_page' => 2
     , 'cache_disabled' => 1
     , 'cache_resource' => 0
+    , 'pdotools_fenom_modx' => 1
+    , 'pdotools_fenom_parser' => 1
 
     //mail
     , 'mail_smtp_auth' => 1
@@ -246,6 +248,7 @@ $crttv = $modx->runProcessor('element/tv/create', array(
     	'name' => 'img',
     	'caption' => 'Изображение',
     	'type' => 'image',
+
 ));
 
 $crttv = $modx->runProcessor('element/tv/create', array(
