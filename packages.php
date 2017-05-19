@@ -31,7 +31,8 @@ $providers = array(
             'MIGX',
             'TinyMCE Rich Text Editor',
             'simpleUpdater',
-            'phpThumbOn'
+            'phpThumbOn',
+            'recaptchav2'
         ),
     ),
     array(
