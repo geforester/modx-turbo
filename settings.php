@@ -41,6 +41,7 @@ $settings = array(
     , 'mail_use_smtp' => 1
     , 'mail_smtp_user' => $smtpUser
     , 'mail_smtp_pass' => $smtpPass
+    , 'emailsender' => $smtpUser
 
 	//url
 	, 'automatic_alias' => 1
