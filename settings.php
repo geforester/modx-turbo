@@ -32,6 +32,7 @@ $settings = array(
     , 'cache_resource' => 0
     , 'pdotools_fenom_modx' => 1
     , 'pdotools_fenom_parser' => 1
+    , 'fastuploadtv.translit' => 1
 
     //mail
     , 'mail_smtp_auth' => 1
