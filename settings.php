@@ -46,6 +46,8 @@ $settings = array(
 
 	//url
 	, 'automatic_alias' => 1
+	, 'friendly_alias_restrict_chars_pattern' => '/[\0\x0B\t\n\r\f\a&=«»№+%$*!#()<>"~:`@\?\[\]\{\}\|\^\'\\]/'
+	, 'friendly_alias_realtime' => 1
 	, 'friendly_urls' => 1
 	, 'friendly_alias_translit' => 'russian'
     , 'use_alias_path' => 1
