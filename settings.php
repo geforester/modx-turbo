@@ -202,6 +202,7 @@ $staticChunks = array(
 foreach ($staticChunks as $item) {
     $staticChunksParam = array(
         'name' => $item,
+        'source' => 1,
         'static' => '1',
         'static_file' => "/assets/templates/chunks/{$item}.html"
     );
