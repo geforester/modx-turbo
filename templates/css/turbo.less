@@ -1,6 +1,9 @@
 @c-primary: blue;
 @c-secondary: blue;
 
+@990:   ~"(max-width: 990px)";
+@780:   ~"(max-width: 780px)";
+
 * {
     -webkit-font-smoothing: antialiased
 }
@@ -24,11 +27,6 @@ h1,h2,h3,h4,h5 {
     margin: 20px 0 10px 0;
 }
 
-.font-size(@font-size-px) {
-    font-size: @font-size-px/16rem;
-}
-
-
 .t-duration {
     transition-duration: 0.3s;
 }
@@ -36,4 +34,8 @@ h1,h2,h3,h4,h5 {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.font-size(@font-size-px) {
+    font-size: @font-size-px/16rem;
 }
