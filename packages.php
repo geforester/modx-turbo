@@ -47,7 +47,7 @@ $providers = array(
             'AjaxForm',
             'minifyx',
             'yTranslit',
-            'FastUploadTV'
+            'mixedImage'
         ),
     ),
 );
