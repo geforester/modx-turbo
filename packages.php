@@ -33,7 +33,7 @@ $providers = array(
             'simpleUpdater',
             'phpThumbOn',
             'QuickEmail',
-            'recaptchav3'
+            'reCaptchaV3'
         ),
     ),
     array(
