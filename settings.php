@@ -51,7 +51,6 @@ $settings = array(
 	, 'friendly_urls' => 1
 	, 'friendly_alias_translit' => 'russian'
     , 'use_alias_path' => 1
-    , 'friendly_alias_ytranslit_key' => $yandexKey
 
 
 );
