@@ -32,7 +32,8 @@ $providers = array(
             'TinyMCE Rich Text Editor',
             'simpleUpdater',
             'phpThumbOn',
-            'recaptchav2'
+            'QuickEmail',
+            'recaptchav3'
         ),
     ),
     array(
@@ -46,7 +47,6 @@ $providers = array(
             'pdotools',
             'AjaxForm',
             'minifyx',
-            'yTranslit',
             'mixedImage'
         ),
     ),
