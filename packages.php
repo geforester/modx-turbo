@@ -23,7 +23,7 @@ if ($modstoreKey == "" || $modstoreUser == "") {
 $providers = array(
     array(
         'name'		=> 'modx.com',
-        'service_url'	=> 'http://rest.modx.com/extras/',
+        'service_url'	=> 'https://rest.modx.com/extras/',
         'username'	=> '',
         'api_key'	=> '',
         'packages'	=> array(
@@ -38,7 +38,7 @@ $providers = array(
     ),
     array(
         'name'		=> 'Modstore',
-        'service_url'	=> 'http://modstore.pro/extras/',
+        'service_url'	=> 'https://modstore.pro/extras/',
         'username'	=> $modstoreUser,
         'api_key'	=> $modstoreKey,
         'packages'	=> array(
