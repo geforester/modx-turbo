@@ -30,7 +30,6 @@ $providers = array(
             'formit',
             'MIGX',
             'TinyMCE Rich Text Editor',
-            'simpleUpdater',
             'phpThumbOn',
             'QuickEmail',
             'reCaptchaV3',
